@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
+﻿<configuration>
   <configSections>
     <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection,Microsoft.Practices.Unity.Configuration"/>
   </configSections>
@@ -7,7 +6,10 @@
     <containers>
       <container name="unityContainer">
         <!--type,mapTo:逗号左边是类的完全限定名,即命名空间+类名;逗号右边是程序集名称-->
-        <register type="IOCUnity.IPhone,IOCUnity" mapTo="IOCUnity.AndroidPhone,IOCUnity"></register>
+        <register type="Interface.IHead,Interface" mapTo="Service.Head,Service"></register>
+        <register type="Interface.IMicro,Interface" mapTo="Service.Micro,Service"></register>
+        <register type="Interface.IPhone,Interface" mapTo="Service.Phone,Service"></register>
+        <register type="Interface.IPower,Interface" mapTo="Service.Power,Service"></register>
       </container>
     </containers>
   </unity>
